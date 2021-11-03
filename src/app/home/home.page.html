@@ -1,20 +1,53 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-content class="splash">
+  <div class="container">
+    <ion-row>
+      <ion-col class="center logo">
+        <ion-img src="/assets/icon/logo-blanco.png" class="log"></ion-img>
+      </ion-col>
+    </ion-row>
+    <div class="center title">
+      <h1>INICIO DE SESI&Oacute;N</h1>
+    </div>
+    <form ng-submit="doLogin(loginForm)" name="loginForm" novalidate="" class="no-border">
+      <div class="item item-input item-select">
+        <div class="form-error" ng-show="loginForm.$submitted">
+          <div class="error center" ng-repeat="error in errors.country">{{error}}</div>
+        </div>
+        <select name="country" ng-model="loginData.country" ng-options="op.pais for op in paises track by op.id" required>
+            <option value="">Selecciona tu pa&iacute;s</option>
+        </select>
+      </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <div class="input-form">
+        <label for="phone">Usuario👤</label>
+        <input type="tel" name="phone" ng-model="loginData.phone" placeholder="n&uacute;mero Claro" maxlength="11" required>
+        <div class="form-error" ng-show="loginForm.$submitted">
+          <div class="error center" ng-repeat="error in errors.phone">{{error}}</div>
+        </div>
+      </div>
+
+      <div class="input-form">
+        <label for="password">Clave🔐</label>
+        <input type="password" name="password" value="" ng-model="loginData.password" placeholder="Ingresa tu contrase&ntilde;a" required>
+        <div class="form-error" ng-show="loginForm.$submitted">
+          <div class="error center" ng-repeat="error in errors.password">{{error}}</div>
+        </div>
+      </div>
+
+      <p class="center white recover">
+        Olvidaste tu contrase&ntilde;a? Clic <a href="#/app/reset/">AQU&Iacute;</a>
+      </p>
+
+      <div class="center login">
+        <button class="button button-assertive" href="inicio1">Iniciar Sesi&oacute;n</button>
+        <ion-button color="rgb(161, 43, 43)" href="inicio1">Iniciar Sesi&oacute;n</ion-button>
+      </div>
+
+      <div class="error center" ng-if="error">{{ error }}</div>
+    </form>
+    <p class="center white">
+      Eres nuevo en Cine Club? <a href="#/app/register">Reg&iacute;strate</a>
+    </p>
   </div>
 </ion-content>

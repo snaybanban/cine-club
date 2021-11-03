@@ -1,3 +1,18 @@
+.container {
+  background: rgb(26, 24, 24);
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.log{
+  height: 70%;
+}
+
 #container {
   text-align: center;
 
@@ -25,3 +40,155 @@
 #container a {
   text-decoration: none;
 }
+
+.bar .button.button-icon .icon:before, .bar .button.button-icon.icon-left:before, .bar .button.button-icon.icon-right:before, .bar .button.button-icon:before {
+  line-height: 44px; }
+
+@media screen and (max-width: 1224px) {
+  /* 10 columns for larger screens */
+  .grid-sizer {
+    width: 22.5%; }
+  .grid-item {
+    width: 22.5%; } }
+
+@media screen and (max-width: 720px) {
+  /* 10 columns for larger screens */
+  .grid-sizer {
+    width: 30%; }
+  .grid-item {
+    width: 30%; } }
+
+@media screen and (max-width: 480px) {
+  /* 10 columns for larger screens */
+  .grid-sizer {
+    width: 47%; }
+  .grid-item {
+    width: 47%; } }
+
+@media screen and (max-width: 280px) {
+  /* 10 columns for larger screens */
+  .grid-sizer {
+    width: 97%; }
+  .grid-item {
+    width: 97%; } }
+
+.white {
+  color: white !important; }
+
+a {
+  padding: 5px;
+ }
+
+.center h1 {
+  color: white;
+  font-size: 1.1em; }
+
+.splash {
+  margin: 5%; }
+  .splash .logo {
+    margin: 5% 0; }
+    .splash .logo img {
+      width: 60%; }
+  .splash .register {
+    margin: 1% 0; }
+  .splash .input-form {
+    padding: 5% 0 0; }
+    .splash .input-form label, .splash .input-form input {
+      display: inline-table; }
+    .splash .input-form label {
+      width: 28%;
+      background-color: rgb(161, 43, 43);
+      color: white;
+      margin-left: 7px;
+      padding: 10px 3px;
+      border-radius: 5px;
+      text-align: center; }
+    .splash .input-form input {
+      width: 68%;
+      height: 43px;
+      border-radius: 5px;
+      text-align: center;
+      font-style: italic; }
+  .splash .input-form-stacked label, .splash .input-form-stacked input {
+    display: block; }
+  .splash .input-form-stacked label {
+    color: white;
+    text-align: center;
+    font-size: 16px; }
+  .splash .input-form-stacked input {
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 4% auto;
+    font-style: italic; }
+  .splash .fblogin .button {
+    color: gray; }
+  .splash .fblogin img {
+    margin-right: 5px; }
+  .splash .fblogin img, .splash .fblogin a {
+    vertical-align: middle; }
+  .splash .fblogin a {
+    padding: 10px;
+    text-decoration: none;
+    font-style: italic; }
+    
+.splash .login .button{
+  color: rgb(255, 232, 232);
+  background-color: rgb(148, 26, 26);
+  padding: 10px;
+}
+/*
+*   spinner
+*/
+div.spinner {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 85px;
+  text-align: center; }
+
+.spinner svg {
+  width: 19% !important;
+  height: 85px !important;
+  stroke: #444;
+  fill: #444; }
+
+.item-select {
+  padding: 0;
+  text-align: center;
+  border: 0;
+  width: 80%;
+  margin: 4% auto; }
+  .item-select select {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: 40px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    padding: 0;
+    text-align: center;
+    direction: initial; }
+    .item-select select option {
+      text-align: center; }
+
+
+.item a.poster {
+  padding: 0; }
+
+.buy-ticket {
+  font-size: 13px;
+  color: white !important;
+  border-color: white !important;
+  margin-top: 5px;
+  min-height: 42px;
+  border-radius: 5px;
+  border-width: 2px; }
+
+ul.slides li a {
+  padding: 0; }

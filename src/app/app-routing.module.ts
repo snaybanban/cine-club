@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'inicio1',
+    loadChildren: () => import('./home/inicio1/inicio1.module').then( m => m.Inicio1PageModule)
+  },
+  {
+    path: 'interfas',
+    loadChildren: () => import('./home/interfas/interfas.module').then( m => m.InterfasPageModule)
+  }
 ];
 
 @NgModule({
