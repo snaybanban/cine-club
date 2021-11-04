@@ -21,7 +21,7 @@
 
       <div class="input-form">
         <label for="phone">Usuario👤</label>
-        <input type="tel" name="phone" ng-model="loginData.phone" placeholder="n&uacute;mero Claro" maxlength="11" required>
+        <input type="number" name="number"[(ngModel)]="number" placeholder="n&uacute;mero Claro" maxlength="11" required>
         <div class="form-error" ng-show="loginForm.$submitted">
           <div class="error center" ng-repeat="error in errors.phone">{{error}}</div>
         </div>
@@ -40,8 +40,8 @@
       </p>
 
       <div class="center login">
-        <button class="button button-assertive" href="inicio1">Iniciar Sesi&oacute;n</button>
-        <ion-button color="rgb(161, 43, 43)" href="inicio1">Iniciar Sesi&oacute;n</ion-button>
+        <!-- <button class="button button-assertive" href="inicio1">Iniciar Sesi&oacute;n</button> -->
+        <ion-button color="rgb(161, 43, 43)" (click)="enviarmsj()">Iniciar Sesi&oacute;n</ion-button>
       </div>
 
       <div class="error center" ng-if="error">{{ error }}</div>

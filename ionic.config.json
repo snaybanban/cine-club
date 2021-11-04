@@ -1,7 +1,10 @@
 {
   "name": "cine-club",
   "integrations": {
-    "capacitor": {}
+    "cordoba": {
+      "enabled": false
+    },
+    "cordova": {}
   },
   "type": "angular"
 }
