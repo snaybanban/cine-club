@@ -1,27 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-interfas',
   templateUrl: './interfas.page.html',
   styleUrls: ['./interfas.page.scss'],
 })
-export class InterfasPage {
+export class InterfasPage implements OnInit {
+  public interfas: string;
 
-  constructor(private menu: MenuController, router: Router) { }
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
-  openFirst() {
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
+  ngOnInit() {
+    this.interfas = this.activatedRoute.snapshot.paramMap.get('id');
   }
 
-  openEnd() {
-    this.menu.open('end');
-  }
-
-  openCustom() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
-  }
 }
